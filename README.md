@@ -31,6 +31,23 @@ Aplikasi ini dirancang menggunakan arsitektur **Model-View-Controller (MVC)** de
 
 ---
 
+---
+
+## 📷 Tangkapan Layar Antarmuka
+
+| Welcome Page Laravel | Halaman Dashboard (Route `/`) |
+| :---: | :---: |
+| ![Welcome](ss-welcome.png) | ![Home](ss-home.png) |
+
+| Halaman About (Route `/about`) | Halaman Contact (Route `/contact`) |
+| :---: | :---: |
+| ![About](ss-about.png) | ![Contact](ss-contact.png) |
+
+| Route Parameter Dinamis (`/hello/{nama}`) |
+| :---: |
+| ![Hello](ss-hello.png) |
+
+---
 ## 📂 Struktur Utama Folder Proyek
 
 ```text

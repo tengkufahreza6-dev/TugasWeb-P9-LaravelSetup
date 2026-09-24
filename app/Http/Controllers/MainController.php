@@ -44,7 +44,7 @@ class MainController extends Controller
     }
 
     public function hello($nama)
-    {
-        return "Autentikasi Sesi Berhasil. Selamat Datang, Operator " . e($nama) . ". Akses Sistem Diberikan.";
-    }
+{
+    return view('hello', ['nama' => $nama]);
+}
 }
