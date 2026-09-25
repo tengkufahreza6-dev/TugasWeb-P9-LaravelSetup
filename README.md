@@ -48,27 +48,65 @@ Aplikasi ini dirancang menggunakan arsitektur **Model-View-Controller (MVC)** de
 | ![Hello](ss-hello.png) |
 
 ---
-## 📂 Struktur Utama Folder Proyek
+
+## 📂 Struktur Direktori Proyek
+
+Berikut adalah struktur folder utama yang digunakan dalam proyek ini beserta penjelasannya:
 
 ```text
 TugasWeb-P9-LaravelSetup/
-├── app/
+│
+├── app/                                # Kode inti aplikasi (MVC)
 │   ├── Http/
-│   │   └── Controllers/
-│   │       └── MainController.php  <-- Penanganan logika bisnis & penyedia data array
+│   │   ├── Controllers/
+│   │   │   └── MainController.php      # [MODIFIED] Logika bisnis & penyedia data array
+│   │   └── Middleware/                 # Filter HTTP request (bawaan Laravel)
 │   └── Models/
-│       └── Barang.php              <-- Model ORM dasar (Eloquent)
-├── database/
-│   └── migrations/                 <-- Skema struktur tabel MySQL
-├── resources/
-│   └── views/                      <-- Blade Templating Engine (UI Layouts)
-│       ├── home.blade.php          <-- Tampilan utama dashboard
-│       ├── about.blade.php         <-- Tampilan informasi arsitektur
-│       └── contact.blade.php       <-- Tampilan kontak operasional
-├── routes/
-│   └── web.php                     <-- Deklarasi titik akses URL (Routing)
-├── .env                            <-- Konfigurasi kredensial environment & database
-└── README.md                       <-- Dokumentasi teknis proyek
+│       └── Barang.php                  # [MODIFIED] Model ORM Eloquent untuk tabel barang
+│
+├── bootstrap/                          # Bootstrap framework (cache & app startup)
+│   └── cache/                          # Cache konfigurasi & routing
+│
+├── config/                             # Konfigurasi framework Laravel
+│   ├── app.php                         # Konfigurasi aplikasi utama
+│   ├── database.php                    # Konfigurasi koneksi database
+│   └── ...                             # Konfigurasi lainnya (auth, cache, session, dll.)
+│
+├── database/                           # Semua yang berkaitan dengan database
+│   ├── migrations/                     # [MODIFIED] Skema struktur tabel MySQL
+│   ├── seeders/                        # Data awal/seed (opsional)
+│   └── factories/                      # Factory untuk testing (opsional)
+│
+├── public/                             # Document root (akses publik)
+│   └── index.php                       # Entry point aplikasi Laravel
+│
+├── resources/                          # Sumber daya tampilan (View)
+│   └── views/                          # [MODIFIED] Blade Templating Engine
+│       ├── welcome.blade.php           # Halaman default Laravel (screenshot wajib)
+│       ├── home.blade.php              # [CUSTOM] Tampilan utama Dashboard (/)
+│       ├── about.blade.php             # [CUSTOM] Tampilan Sistem Info (/about)
+│       ├── contact.blade.php           # [CUSTOM] Tampilan Kontak Ops (/contact)
+│       └── hello.blade.php             # [CUSTOM] Tampilan route parameter (/hello/{nama})
+│
+├── routes/                             # Deklarasi routing aplikasi
+│   ├── web.php                         # [MODIFIED] Route URL (web)
+│   ├── console.php                     # Route untuk Artisan command
+│   └── channels.php                    # Route untuk broadcasting (opsional)
+│
+├── storage/                            # Penyimpanan runtime
+│   ├── app/                            # File upload & generated files
+│   ├── framework/                      # Cache, session, views compiled
+│   └── logs/                           # Log aplikasi (laravel.log)
+│
+├── tests/                              # Unit & Feature testing (opsional)
+│
+├── vendor/                             # Dependencies dari Composer (JANGAN edit)
+│
+├── .env                                # [MODIFIED] Konfigurasi environment & database
+├── .env.example                        # Template environment (untuk clone)
+├── artisan                             # CLI Laravel (php artisan ...)
+├── composer.json                       # Manifest dependencies PHP
+└── README.md                           # [MODIFIED] Dokumentasi teknis proyek
 ```
 ---
 
