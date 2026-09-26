@@ -110,6 +110,53 @@ TugasWeb-P9-LaravelSetup/
 ```
 ---
 
+## ⚙️ Panduan Instalasi & Menjalankan Proyek
+
+Ikuti langkah-langkah di bawah ini untuk mengkloning dan menjalankan proyek ini di lingkungan lokal Anda:
+
+### 1. Kloning Repositori
+\`\`\`bash
+git clone https://github.com/tengkufahreza6-dev/TugasWeb-P9-LaravelSetup.git
+cd TugasWeb-P9-LaravelSetup
+\`\`\`
+
+### 2. Pasang Dependencies Composer
+\`\`\`bash
+composer install
+\`\`\`
+
+### 3. Konfigurasi Environment File
+Salin file konfigurasi contoh dan buat database baru di phpMyAdmin/MySQL dengan nama `tugasweb_p9`:
+\`\`\`bash
+cp .env.example .env
+\`\`\`
+
+Pastikan konfigurasi database di file `.env` telah disesuaikan:
+\`\`\`env
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=tugasweb_p9
+DB_USERNAME=root
+DB_PASSWORD=
+\`\`\`
+
+### 4. Generate Application Key
+\`\`\`bash
+php artisan key:generate
+\`\`\`
+
+### 5. Jalankan Migrasi Database
+\`\`\`bash
+php artisan migrate
+\`\`\`
+
+### 6. Jalankan Server Lokal
+\`\`\`bash
+php artisan serve
+\`\`\`
+Akses aplikasi melalui peramban web pada tautan: **http://127.0.0.1:8000**
+
 ## 👤 Identitas Mahasiswa
 
 | Keterangan | Detail |
