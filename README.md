@@ -205,7 +205,7 @@ Akses aplikasi melalui peramban web pada tautan: **`http://127.0.0.1:8000`**
 
 | Teknologi | Fungsi |
 | :--- | :--- |
-| **Laravel 11/12** | Framework PHP dengan arsitektur MVC |
+| **Laravel 13** | Framework PHP dengan arsitektur MVC |
 | **PHP 8.3** | Bahasa pemrograman backend |
 | **MySQL 8.0** | Database relasional |
 | **Blade Templating** | Engine tampilan Laravel |
