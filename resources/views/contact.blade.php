@@ -13,14 +13,14 @@
             <span class="font-mono text-sm tracking-wider text-slate-300 font-semibold">SYS_CONSOLE v1.0</span>
         </div>
         <nav class="flex items-center gap-4 sm:gap-6 text-sm font-medium">
-            <a href="/" class="text-slate-400 hover:text-slate-200 transition">Dashboard</a>
-            <a href="/about" class="text-slate-400 hover:text-slate-200 transition">Sistem Info</a>
-            <a href="/contact" class="text-blue-400 border-b-2 border-blue-400 pb-1">Kontak Ops</a>
-            <a href="/hello/Fahreza" class="px-2.5 py-1 bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 rounded-lg text-xs font-mono transition flex items-center gap-1.5 shadow-sm">
-                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
-                <span>Demo Bonus: /hello</span>
-            </a>
-        </nav>
+    <a href="/" class="text-slate-400 hover:text-slate-200 transition">Dashboard</a>
+   <a href="/about" class="text-slate-400 hover:text-slate-200 transition">Sistem Info</a>
+    <a href="/contact" class="text-blue-400 border-b-2 border-blue-400 pb-1">Kontak Ops</a>
+    <a href="/hello/Operator" class="text-slate-400 hover:text-emerald-400 transition flex items-center gap-1.5 font-mono text-xs">
+        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+        <span>Sesi Operator</span>
+    </a>
+</nav>
     </header>
 
     <main class="max-w-4xl mx-auto w-full px-6 py-12">

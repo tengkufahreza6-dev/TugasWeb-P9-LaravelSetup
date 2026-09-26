@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Barang;
 
 class MainController extends Controller
 {
@@ -18,6 +19,7 @@ class MainController extends Controller
                 ['nama' => 'Log Transaksi Masuk/Keluar', 'stok' => 'Real-time Audited']
             ]
         ];
+
         return view('home', compact('data'));
     }
 
@@ -29,6 +31,7 @@ class MainController extends Controller
             'pengembang' => 'T. Fahreza (Dev-ID: 2026-UNIMED)',
             'visi'       => 'Penyediaan platform manajemen aset komputasi yang efisien, terstruktur, dan tersinkronisasi presisi.'
         ];
+
         return view('about', compact('info'));
     }
 
@@ -40,11 +43,12 @@ class MainController extends Controller
             'telepon'  => '+62 822-6782-8900',
             'lokasi'   => 'Medan, Sumatera Utara'
         ];
+
         return view('contact', compact('kontak'));
     }
 
     public function hello($nama)
-{
-    return view('hello', ['nama' => $nama]);
-}
+    {
+        return view('hello', ['nama' => $nama]);
+    }
 }
